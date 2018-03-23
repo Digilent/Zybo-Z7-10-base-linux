@@ -43,8 +43,8 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 set list_projs [get_projects -quiet]
 if { $list_projs eq "" } {
-   create_project project_1 myproj -part xc7z020clg400-1
-   set_property BOARD_PART digilentinc.com:zybo-z7-20:part0:1.0 [current_project]
+   create_project project_1 myproj -part xc7z010clg400-1
+   set_property BOARD_PART digilentinc.com:zybo-z7-10:part0:1.0 [current_project]
 }
 
 
@@ -58,7 +58,7 @@ set run_remote_bd_flow 1
 if { $run_remote_bd_flow == 1 } {
   # Set the reference directory for source file relative paths (by default 
   # the value is script directory path)
-  set origin_dir ./Zybo-Z7-20-base-linux/src/bd
+  set origin_dir ./bd
 
   # Use origin directory path location variable, if specified in the tcl shell
   if { [info exists ::origin_dir_loc] } {
@@ -178,7 +178,7 @@ proc create_root_design { parentCell } {
   set ac_recdat [ create_bd_port -dir I -from 0 -to 0 ac_recdat ]
   set ac_reclrc [ create_bd_port -dir O -from 0 -to 0 ac_reclrc ]
   set hdmi_in_hpd [ create_bd_port -dir O -from 0 -to 0 hdmi_in_hpd ]
-  set pwm_rgb [ create_bd_port -dir O -from 5 -to 0 pwm_rgb ]
+  set pwm_rgb [ create_bd_port -dir O -from 2 -to 0 pwm_rgb ]
   set sys_clock [ create_bd_port -dir I -type clk sys_clock ]
   set_property -dict [ list \
 CONFIG.FREQ_HZ {125000000} \
@@ -199,6 +199,7 @@ CONFIG.C_TRI_DEFAULT {0xFFFFFFFF} \
   # Create instance: axi_gpio_led, and set properties
   set axi_gpio_led [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_led ]
   set_property -dict [ list \
+CONFIG.C_GPIO_WIDTH {4} \
 CONFIG.GPIO_BOARD_INTERFACE {leds_4bits} \
 CONFIG.USE_BOARD_FLOW {true} \
  ] $axi_gpio_led
@@ -206,6 +207,11 @@ CONFIG.USE_BOARD_FLOW {true} \
   # Create instance: axi_gpio_sw_btn, and set properties
   set axi_gpio_sw_btn [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_sw_btn ]
   set_property -dict [ list \
+CONFIG.C_ALL_INPUTS {1} \
+CONFIG.C_ALL_INPUTS_2 {1} \
+CONFIG.C_GPIO2_WIDTH {4} \
+CONFIG.C_GPIO_WIDTH {4} \
+CONFIG.C_IS_DUAL {1} \
 CONFIG.GPIO2_BOARD_INTERFACE {btns_4bits} \
 CONFIG.GPIO_BOARD_INTERFACE {sws_4bits} \
 CONFIG.USE_BOARD_FLOW {true} \
@@ -289,6 +295,7 @@ CONFIG.S_HAS_TLAST {1} \
 CONFIG.S_TDATA_NUM_BYTES {3} \
 CONFIG.S_TUSER_WIDTH {1} \
 CONFIG.TDATA_REMAP {tdata[23:16],tdata[7:0],tdata[15:8]} \
+CONFIG.TKEEP_REMAP {tkeep[2:0]} \
 CONFIG.TLAST_REMAP {tlast[0]} \
 CONFIG.TUSER_REMAP {tuser[0:0]} \
  ] $axis_subset_converter_out
@@ -296,6 +303,7 @@ CONFIG.TUSER_REMAP {tuser[0:0]} \
   # Create instance: clk_wiz_0, and set properties
   set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:5.4 clk_wiz_0 ]
   set_property -dict [ list \
+CONFIG.CLKIN1_JITTER_PS {80.0} \
 CONFIG.CLKOUT1_DRIVES {BUFG} \
 CONFIG.CLKOUT1_JITTER {361.670} \
 CONFIG.CLKOUT1_PHASE_ERROR {249.865} \
@@ -308,6 +316,7 @@ CONFIG.CLKOUT6_DRIVES {BUFG} \
 CONFIG.CLKOUT7_DRIVES {BUFG} \
 CONFIG.CLK_IN1_BOARD_INTERFACE {sys_clock} \
 CONFIG.MMCM_CLKFBOUT_MULT_F {36} \
+CONFIG.MMCM_CLKIN1_PERIOD {8.000} \
 CONFIG.MMCM_CLKIN2_PERIOD {10.0} \
 CONFIG.MMCM_CLKOUT0_DIVIDE_F {75} \
 CONFIG.MMCM_COMPENSATION {ZHOLD} \
@@ -387,10 +396,12 @@ CONFIG.PCW_EN_CLK1_PORT {1} \
 CONFIG.PCW_EN_CLK2_PORT {1} \
 CONFIG.PCW_EN_CLK3_PORT {0} \
 CONFIG.PCW_EN_EMIO_I2C0 {1} \
+CONFIG.PCW_EN_EMIO_I2C1 {1} \
 CONFIG.PCW_EN_EMIO_TTC0 {1} \
 CONFIG.PCW_EN_ENET0 {1} \
 CONFIG.PCW_EN_GPIO {1} \
 CONFIG.PCW_EN_I2C0 {1} \
+CONFIG.PCW_EN_I2C1 {1} \
 CONFIG.PCW_EN_QSPI {1} \
 CONFIG.PCW_EN_SDIO0 {1} \
 CONFIG.PCW_EN_TTC0 {1} \
@@ -436,6 +447,9 @@ CONFIG.PCW_I2C0_GRP_INT_ENABLE {1} \
 CONFIG.PCW_I2C0_GRP_INT_IO {EMIO} \
 CONFIG.PCW_I2C0_I2C0_IO {EMIO} \
 CONFIG.PCW_I2C0_PERIPHERAL_ENABLE {1} \
+CONFIG.PCW_I2C1_GRP_INT_ENABLE {1} \
+CONFIG.PCW_I2C1_GRP_INT_IO {EMIO} \
+CONFIG.PCW_I2C1_I2C1_IO {EMIO} \
 CONFIG.PCW_I2C1_PERIPHERAL_ENABLE {1} \
 CONFIG.PCW_I2C_PERIPHERAL_FREQMHZ {111.111115} \
 CONFIG.PCW_I2C_RESET_ENABLE {1} \
@@ -815,7 +829,7 @@ CONFIG.NUM_MI {12} \
   # Create instance: pwm_rgb, and set properties
   set pwm_rgb [ create_bd_cell -type ip -vlnv digilentinc.com:IP:PWM:2.0 pwm_rgb ]
   set_property -dict [ list \
-CONFIG.NUM_PWM {6} \
+CONFIG.NUM_PWM {3} \
  ] $pwm_rgb
 
   # Create instance: rgb2dvi_1, and set properties
@@ -887,10 +901,12 @@ CONFIG.CHANNEL_ENABLE_VCCPINT {true} \
 CONFIG.CHANNEL_ENABLE_VP_VN {false} \
 CONFIG.CHANNEL_ENABLE_VREFN {true} \
 CONFIG.CHANNEL_ENABLE_VREFP {true} \
+CONFIG.ENABLE_RESET {false} \
 CONFIG.ENABLE_VCCDDRO_ALARM {false} \
 CONFIG.ENABLE_VCCPAUX_ALARM {false} \
 CONFIG.ENABLE_VCCPINT_ALARM {false} \
 CONFIG.EXTERNAL_MUX_CHANNEL {VP_VN} \
+CONFIG.INTERFACE_SELECTION {Enable_AXI} \
 CONFIG.OT_ALARM {false} \
 CONFIG.SEQUENCER_MODE {Continuous} \
 CONFIG.SINGLE_CHANNEL_SELECTION {TEMPERATURE} \
@@ -959,7 +975,6 @@ CONFIG.NUM_PORTS {6} \
   connect_bd_intf_net -intf_net v_vid_in_axi4s_0_vtiming_out [get_bd_intf_pins v_tc_in/vtiming_in] [get_bd_intf_pins v_vid_in_axi4s_0/vtiming_out]
 
   # Create port connections
-  connect_bd_net -net PWM_0_pwm [get_bd_ports pwm_rgb] [get_bd_pins pwm_rgb/pwm]
   connect_bd_net -net SDATA_I_1 [get_bd_ports ac_recdat] [get_bd_pins axi_i2s_adi_0/SDATA_I]
   connect_bd_net -net axi_dynclk_0_LOCKED_O [get_bd_pins axi_dynclk_0/LOCKED_O] [get_bd_pins rgb2dvi_1/aRst_n]
   connect_bd_net -net axi_dynclk_0_PXL_CLK_5X_O [get_bd_pins axi_dynclk_0/PXL_CLK_5X_O] [get_bd_pins rgb2dvi_1/SerialClk]
@@ -981,6 +996,7 @@ CONFIG.NUM_PORTS {6} \
   connect_bd_net -net processing_system7_0_FCLK_CLK2 [get_bd_pins dvi2rgb_1/RefClk] [get_bd_pins processing_system7_0/FCLK_CLK2]
   connect_bd_net -net processing_system7_0_FCLK_CLK3 [get_bd_pins processing_system7_0/FCLK_CLK1] [get_bd_pins util_ds_buf_fclk1/BUFG_I]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins proc_sys_reset_0/ext_reset_in] [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_100M/ext_reset_in] [get_bd_pins rst_ps7_0_133M/ext_reset_in]
+  connect_bd_net -net pwm_rgb_pwm [get_bd_ports pwm_rgb] [get_bd_pins pwm_rgb/pwm]
   connect_bd_net -net rst_ps7_0_100M_interconnect_aresetn [get_bd_pins ps7_0_axi_periph_GP0/ARESETN] [get_bd_pins rst_ps7_0_100M/interconnect_aresetn]
   connect_bd_net -net rst_ps7_0_100M_peripheral_aresetn [get_bd_pins axi_dynclk_0/s00_axi_aresetn] [get_bd_pins axi_gpio_eth/s_axi_aresetn] [get_bd_pins axi_gpio_led/s_axi_aresetn] [get_bd_pins axi_gpio_sw_btn/s_axi_aresetn] [get_bd_pins axi_gpio_video/s_axi_aresetn] [get_bd_pins axi_i2s_adi_0/DMA_REQ_RX_RSTN] [get_bd_pins axi_i2s_adi_0/DMA_REQ_TX_RSTN] [get_bd_pins axi_i2s_adi_0/S_AXI_ARESETN] [get_bd_pins axi_vdma_0/axi_resetn] [get_bd_pins axi_vdma_1/axi_resetn] [get_bd_pins dvi2rgb_1/aRst_n] [get_bd_pins ps7_0_axi_periph_GP0/M00_ARESETN] [get_bd_pins ps7_0_axi_periph_GP0/M01_ARESETN] [get_bd_pins ps7_0_axi_periph_GP0/M02_ARESETN] [get_bd_pins ps7_0_axi_periph_GP0/M03_ARESETN] [get_bd_pins ps7_0_axi_periph_GP0/M04_ARESETN] [get_bd_pins ps7_0_axi_periph_GP0/M05_ARESETN] [get_bd_pins ps7_0_axi_periph_GP0/M06_ARESETN] [get_bd_pins ps7_0_axi_periph_GP0/M07_ARESETN] [get_bd_pins ps7_0_axi_periph_GP0/M08_ARESETN] [get_bd_pins ps7_0_axi_periph_GP0/M09_ARESETN] [get_bd_pins ps7_0_axi_periph_GP0/M10_ARESETN] [get_bd_pins ps7_0_axi_periph_GP0/M11_ARESETN] [get_bd_pins ps7_0_axi_periph_GP0/S00_ARESETN] [get_bd_pins pwm_rgb/pwm_axi_aresetn] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn] [get_bd_pins v_tc_in/s_axi_aresetn] [get_bd_pins v_tc_out/s_axi_aresetn] [get_bd_pins xadc_wiz_0/s_axi_aresetn]
   connect_bd_net -net rst_ps7_0_133M_interconnect_aresetn [get_bd_pins axi_mem_intercon_HP0/ARESETN] [get_bd_pins rst_ps7_0_133M/interconnect_aresetn]

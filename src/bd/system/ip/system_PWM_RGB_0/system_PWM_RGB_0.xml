@@ -553,11 +553,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Oct 11 11:11:58 UTC 2017</spirit:value>
+            <spirit:value>Sun Jan 28 22:03:07 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:88abb682</spirit:value>
+            <spirit:value>7:4166ff33</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -572,11 +572,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Oct 11 11:11:58 UTC 2017</spirit:value>
+            <spirit:value>Sun Jan 28 22:03:07 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:88abb682</spirit:value>
+            <spirit:value>7:4166ff33</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -591,11 +591,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Oct 11 11:11:58 UTC 2017</spirit:value>
+            <spirit:value>Sun Jan 28 22:03:07 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:4ff70da8</spirit:value>
+            <spirit:value>7:aa42554a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -610,11 +610,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Oct 11 11:11:58 UTC 2017</spirit:value>
+            <spirit:value>Sun Jan 28 22:03:07 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:4ff70da8</spirit:value>
+            <spirit:value>7:aa42554a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -628,11 +628,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Oct 11 11:16:40 UTC 2017</spirit:value>
+            <spirit:value>Sun Jan 28 22:04:42 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:88abb682</spirit:value>
+            <spirit:value>7:4166ff33</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -643,7 +643,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.NUM_PWM&apos;)) - 1)">5</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.NUM_PWM&apos;)) - 1)">2</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -981,7 +981,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>NUM_PWM</spirit:name>
         <spirit:displayName>Num Pwm</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.NUM_PWM">6</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.NUM_PWM">3</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="reg">
         <spirit:name>POLARITY</spirit:name>
@@ -1141,7 +1141,7 @@
     <spirit:parameter>
       <spirit:name>NUM_PWM</spirit:name>
       <spirit:displayName>Number of PWMs</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.NUM_PWM" spirit:minimum="1" spirit:maximum="16" spirit:rangeType="long">6</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.NUM_PWM" spirit:minimum="1" spirit:maximum="16" spirit:rangeType="long">3</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>POLARITY</spirit:name>

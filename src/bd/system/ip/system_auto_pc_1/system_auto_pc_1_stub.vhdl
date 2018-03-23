@@ -1,13 +1,13 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.2.1 (lin64) Build 1957588 Wed Aug  9 16:32:10 MDT 2017
--- Date        : Wed Oct 11 04:14:41 2017
+-- Date        : Sun Jan 28 14:06:44 2018
 -- Host        : ubuntu running 64-bit unknown
--- Command     : write_vhdl -force -mode synth_stub -rename_top system_auto_pc_1 -prefix
---               system_auto_pc_1_ system_auto_pc_1_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub
+--               /home/digilent/work/git/Zybo-Z7-10-base-linux/src/bd/system/ip/system_auto_pc_1/system_auto_pc_1_stub.vhdl
 -- Design      : system_auto_pc_1
 -- Purpose     : Stub declaration of top-level module interface
--- Device      : xc7z020clg400-1
+-- Device      : xc7z010clg400-1
 -- --------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;

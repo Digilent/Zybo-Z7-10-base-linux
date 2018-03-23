@@ -1,13 +1,13 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.2.1 (lin64) Build 1957588 Wed Aug  9 16:32:10 MDT 2017
-// Date        : Wed Oct 11 04:15:21 2017
+// Date        : Sun Jan 28 14:05:54 2018
 // Host        : ubuntu running 64-bit unknown
 // Command     : write_verilog -force -mode synth_stub
-//               /home/digilent/work/git/Zybo-Z7-20-base-linux/src/bd/system/ip/system_rgb2dvi_1_0/system_rgb2dvi_1_0_stub.v
+//               /home/digilent/work/git/Zybo-Z7-10-base-linux/src/bd/system/ip/system_rgb2dvi_1_0/system_rgb2dvi_1_0_stub.v
 // Design      : system_rgb2dvi_1_0
 // Purpose     : Stub declaration of top-level module interface
-// Device      : xc7z020clg400-1
+// Device      : xc7z010clg400-1
 // --------------------------------------------------------------------------------
 
 // This empty module with port declaration file causes synthesis tools to infer a black box for IP.

@@ -1,18 +1,18 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.2.1 (lin64) Build 1957588 Wed Aug  9 16:32:10 MDT 2017
-// Date        : Wed Oct 11 04:13:29 2017
+// Date        : Sun Jan 28 14:05:56 2018
 // Host        : ubuntu running 64-bit unknown
-// Command     : write_verilog -force -mode funcsim -rename_top system_xlconstant_1_0 -prefix
-//               system_xlconstant_1_0_ system_xlconstant_0_0_sim_netlist.v
-// Design      : system_xlconstant_0_0
+// Command     : write_verilog -force -mode funcsim
+//               /home/digilent/work/git/Zybo-Z7-10-base-linux/src/bd/system/ip/system_xlconstant_1_0/system_xlconstant_1_0_sim_netlist.v
+// Design      : system_xlconstant_1_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
-// Device      : xc7z020clg400-1
+// Device      : xc7z010clg400-1
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "system_xlconstant_0_0,xlconstant_v1_1_3_xlconstant,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "xlconstant_v1_1_3_xlconstant,Vivado 2017.2.1" *) 
+(* CHECK_LICENSE_TYPE = "system_xlconstant_1_0,xlconstant_v1_1_3_xlconstant,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "xlconstant_v1_1_3_xlconstant,Vivado 2017.2.1" *) 
 (* NotValidForBitStream *)
 module system_xlconstant_1_0
    (dout);

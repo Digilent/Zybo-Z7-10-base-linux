@@ -540,11 +540,11 @@ dency video_comp2_offset format long minimum {} maximum {}} value 16} integer {s
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Oct 11 11:12:08 UTC 2017</spirit:value>
+            <spirit:value>Sun Jan 28 22:03:21 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:7a5967c0</spirit:value>
+            <spirit:value>7:adad4bdf</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -558,11 +558,11 @@ dency video_comp2_offset format long minimum {} maximum {}} value 16} integer {s
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Oct 11 17:34:03 UTC 2017</spirit:value>
+            <spirit:value>Sun Jan 28 22:03:21 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:7a5967c0</spirit:value>
+            <spirit:value>7:adad4bdf</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -577,11 +577,11 @@ dency video_comp2_offset format long minimum {} maximum {}} value 16} integer {s
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Oct 11 17:34:03 UTC 2017</spirit:value>
+            <spirit:value>Sun Jan 28 22:03:21 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:7a5967c0</spirit:value>
+            <spirit:value>7:adad4bdf</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -599,11 +599,11 @@ dency video_comp2_offset format long minimum {} maximum {}} value 16} integer {s
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Oct 11 11:12:08 UTC 2017</spirit:value>
+            <spirit:value>Sun Jan 28 22:03:21 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:3b1e280f</spirit:value>
+            <spirit:value>7:aa36e24e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -618,11 +618,11 @@ dency video_comp2_offset format long minimum {} maximum {}} value 16} integer {s
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Oct 11 17:34:03 UTC 2017</spirit:value>
+            <spirit:value>Sun Jan 28 22:03:21 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:3b1e280f</spirit:value>
+            <spirit:value>7:aa36e24e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -636,11 +636,11 @@ dency video_comp2_offset format long minimum {} maximum {}} value 16} integer {s
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Oct 11 17:35:36 UTC 2017</spirit:value>
+            <spirit:value>Sun Jan 28 22:07:10 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:7a5967c0</spirit:value>
+            <spirit:value>7:adad4bdf</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>

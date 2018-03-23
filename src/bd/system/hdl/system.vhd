@@ -1,7 +1,7 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.2.1 (lin64) Build 1957588 Wed Aug  9 16:32:10 MDT 2017
---Date        : Fri Oct 13 09:56:40 2017
+--Date        : Sun Jan 28 14:03:06 2018
 --Host        : ubuntu running 64-bit unknown
 --Command     : generate_target system.bd
 --Design      : system
@@ -5208,7 +5208,7 @@ entity system is
     leds_4bits_tri_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
     leds_4bits_tri_o : out STD_LOGIC_VECTOR ( 3 downto 0 );
     leds_4bits_tri_t : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    pwm_rgb : out STD_LOGIC_VECTOR ( 5 downto 0 );
+    pwm_rgb : out STD_LOGIC_VECTOR ( 2 downto 0 );
     sws_4bits_tri_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
     sys_clock : in STD_LOGIC
   );
@@ -5221,7 +5221,7 @@ end system;
 architecture STRUCTURE of system is
   component system_PWM_RGB_0 is
   port (
-    pwm : out STD_LOGIC_VECTOR ( 5 downto 0 );
+    pwm : out STD_LOGIC_VECTOR ( 2 downto 0 );
     pwm_axi_awaddr : in STD_LOGIC_VECTOR ( 6 downto 0 );
     pwm_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
     pwm_axi_awvalid : in STD_LOGIC;
@@ -5786,6 +5786,12 @@ architecture STRUCTURE of system is
     peripheral_aresetn : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component system_rst_ps7_0_133M_0;
+  component system_util_ds_buf_0_0 is
+  port (
+    BUFG_I : in STD_LOGIC_VECTOR ( 0 to 0 );
+    BUFG_O : out STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  end component system_util_ds_buf_0_0;
   component system_v_axi4s_vid_out_0_0 is
   port (
     aclk : in STD_LOGIC;
@@ -5981,13 +5987,6 @@ architecture STRUCTURE of system is
     dout : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component system_xlconstant_1_0;
-  component system_util_ds_buf_0_0 is
-  port (
-    BUFG_I : in STD_LOGIC_VECTOR ( 0 to 0 );
-    BUFG_O : out STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  end component system_util_ds_buf_0_0;
-  signal PWM_0_pwm : STD_LOGIC_VECTOR ( 5 downto 0 );
   signal SDATA_I_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal Vaux14_1_V_N : STD_LOGIC;
   signal Vaux14_1_V_P : STD_LOGIC;
@@ -6415,6 +6414,7 @@ architecture STRUCTURE of system is
   signal ps7_0_axi_periph_M03_AXI_WREADY : STD_LOGIC;
   signal ps7_0_axi_periph_M03_AXI_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal ps7_0_axi_periph_M03_AXI_WVALID : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal pwm_rgb_pwm : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal rgb2dvi_1_TMDS_CLK_N : STD_LOGIC;
   signal rgb2dvi_1_TMDS_CLK_P : STD_LOGIC;
   signal rgb2dvi_1_TMDS_DATA_N : STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -6542,7 +6542,7 @@ begin
   processing_system7_0_IIC_0_SDA_I <= hdmi_out_ddc_sda_i;
   processing_system7_0_IIC_1_SCL_I <= ac_iic_scl_i;
   processing_system7_0_IIC_1_SDA_I <= ac_iic_sda_i;
-  pwm_rgb(5 downto 0) <= PWM_0_pwm(5 downto 0);
+  pwm_rgb(2 downto 0) <= pwm_rgb_pwm(2 downto 0);
   sys_clock_1 <= sys_clock;
 axi_dynclk_0: component system_axi_dynclk_0_0
      port map (
@@ -7386,7 +7386,7 @@ ps7_0_axi_periph_GP0: entity work.system_ps7_0_axi_periph_GP0_0
     );
 pwm_rgb_RnM: component system_PWM_RGB_0
      port map (
-      pwm(5 downto 0) => PWM_0_pwm(5 downto 0),
+      pwm(2 downto 0) => pwm_rgb_pwm(2 downto 0),
       pwm_axi_aclk => processing_system7_0_FCLK_CLK0,
       pwm_axi_araddr(6 downto 0) => ps7_0_axi_periph_GP0_M08_AXI_ARADDR(6 downto 0),
       pwm_axi_aresetn => rst_ps7_0_100M_peripheral_aresetn(0),

@@ -1,14 +1,14 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.2.1 (lin64) Build 1957588 Wed Aug  9 16:32:10 MDT 2017
--- Date        : Wed Oct 11 04:14:20 2017
+-- Date        : Sun Jan 28 14:05:55 2018
 -- Host        : ubuntu running 64-bit unknown
--- Command     : write_vhdl -force -mode funcsim
---               /home/digilent/work/git/Zybo-Z7-20-base-linux/src/bd/system/ip/system_proc_sys_reset_0_0/system_proc_sys_reset_0_0_sim_netlist.vhdl
--- Design      : system_proc_sys_reset_0_0
+-- Command     : write_vhdl -force -mode funcsim -rename_top system_proc_sys_reset_0_0 -prefix
+--               system_proc_sys_reset_0_0_ system_rst_ps7_0_100M_0_sim_netlist.vhdl
+-- Design      : system_rst_ps7_0_100M_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
--- Device      : xc7z020clg400-1
+-- Device      : xc7z010clg400-1
 -- --------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -25,8 +25,6 @@ entity system_proc_sys_reset_0_0_cdc_sync is
     p_2_in : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_proc_sys_reset_0_0_cdc_sync : entity is "cdc_sync";
 end system_proc_sys_reset_0_0_cdc_sync;
 
 architecture STRUCTURE of system_proc_sys_reset_0_0_cdc_sync is
@@ -235,8 +233,6 @@ entity system_proc_sys_reset_0_0_upcnt_n is
     seq_cnt_en : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_proc_sys_reset_0_0_upcnt_n : entity is "upcnt_n";
 end system_proc_sys_reset_0_0_upcnt_n;
 
 architecture STRUCTURE of system_proc_sys_reset_0_0_upcnt_n is
@@ -401,8 +397,6 @@ entity system_proc_sys_reset_0_0_lpf is
     mb_debug_sys_rst : in STD_LOGIC;
     ext_reset_in : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_proc_sys_reset_0_0_lpf : entity is "lpf";
 end system_proc_sys_reset_0_0_lpf;
 
 architecture STRUCTURE of system_proc_sys_reset_0_0_lpf is
@@ -584,8 +578,6 @@ entity system_proc_sys_reset_0_0_sequence_psr is
     lpf_int : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_proc_sys_reset_0_0_sequence_psr : entity is "sequence_psr";
 end system_proc_sys_reset_0_0_sequence_psr;
 
 architecture STRUCTURE of system_proc_sys_reset_0_0_sequence_psr is
@@ -924,8 +916,6 @@ entity system_proc_sys_reset_0_0_proc_sys_reset is
   attribute C_NUM_PERP_ARESETN of system_proc_sys_reset_0_0_proc_sys_reset : entity is 1;
   attribute C_NUM_PERP_RST : integer;
   attribute C_NUM_PERP_RST of system_proc_sys_reset_0_0_proc_sys_reset : entity is 1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_proc_sys_reset_0_0_proc_sys_reset : entity is "proc_sys_reset";
 end system_proc_sys_reset_0_0_proc_sys_reset;
 
 architecture STRUCTURE of system_proc_sys_reset_0_0_proc_sys_reset is
@@ -1036,7 +1026,7 @@ entity system_proc_sys_reset_0_0 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of system_proc_sys_reset_0_0 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of system_proc_sys_reset_0_0 : entity is "system_proc_sys_reset_0_0,proc_sys_reset,{}";
+  attribute CHECK_LICENSE_TYPE of system_proc_sys_reset_0_0 : entity is "system_rst_ps7_0_100M_0,proc_sys_reset,{}";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of system_proc_sys_reset_0_0 : entity is "yes";
   attribute x_core_info : string;

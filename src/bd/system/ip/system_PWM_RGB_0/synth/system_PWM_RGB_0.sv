@@ -1,4 +1,4 @@
-// (c) Copyright 1995-2017 Xilinx, Inc. All rights reserved.
+// (c) Copyright 1995-2018 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of Xilinx, Inc. and is protected under U.S. and
@@ -78,7 +78,7 @@ module system_PWM_RGB_0 (
   pwm_axi_aresetn
 );
 
-output wire [5 : 0] pwm;
+output wire [2 : 0] pwm;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 PWM_AXI AWADDR" *)
 input wire [6 : 0] pwm_axi_awaddr;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 PWM_AXI AWPROT" *)
@@ -125,7 +125,7 @@ input wire pwm_axi_aresetn;
   PWM_v2_0 #(
     .C_PWM_AXI_DATA_WIDTH(32),  // Width of S_AXI data bus
     .C_PWM_AXI_ADDR_WIDTH(7),  // Width of S_AXI address bus
-    .NUM_PWM(6),
+    .NUM_PWM(3),
     .POLARITY(1'B1)
   ) inst (
     .pwm(pwm),

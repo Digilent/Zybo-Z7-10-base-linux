@@ -924,11 +924,11 @@ Each I/O pin of the AXI GPIO is individually programmable as an input or output 
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Oct 11 11:11:58 UTC 2017</spirit:value>
+            <spirit:value>Sun Jan 28 22:03:07 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:261be629</spirit:value>
+            <spirit:value>7:0b41b3df</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -943,11 +943,11 @@ Each I/O pin of the AXI GPIO is individually programmable as an input or output 
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Oct 11 11:11:58 UTC 2017</spirit:value>
+            <spirit:value>Sun Jan 28 22:03:07 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:261be629</spirit:value>
+            <spirit:value>7:0b41b3df</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -971,11 +971,11 @@ Each I/O pin of the AXI GPIO is individually programmable as an input or output 
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Oct 11 11:11:58 UTC 2017</spirit:value>
+            <spirit:value>Sun Jan 28 22:03:07 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:e3d4f8b5</spirit:value>
+            <spirit:value>7:687c92fe</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -990,11 +990,11 @@ Each I/O pin of the AXI GPIO is individually programmable as an input or output 
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Oct 11 11:11:58 UTC 2017</spirit:value>
+            <spirit:value>Sun Jan 28 22:03:07 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:e3d4f8b5</spirit:value>
+            <spirit:value>7:687c92fe</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1008,11 +1008,11 @@ Each I/O pin of the AXI GPIO is individually programmable as an input or output 
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Oct 11 11:11:58 UTC 2017</spirit:value>
+            <spirit:value>Sun Jan 28 22:03:07 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:261be629</spirit:value>
+            <spirit:value>7:0b41b3df</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1026,11 +1026,11 @@ Each I/O pin of the AXI GPIO is individually programmable as an input or output 
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Oct 11 11:16:05 UTC 2017</spirit:value>
+            <spirit:value>Sun Jan 28 22:07:06 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:261be629</spirit:value>
+            <spirit:value>7:0b41b3df</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2018,6 +2018,7 @@ Each I/O pin of the AXI GPIO is individually programmable as an input or output 
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.WUSER_WIDTH" xilinx:valueSource="constant"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_ACLK.CLK_DOMAIN" xilinx:valueSource="default_prop"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_ACLK.FREQ_HZ" xilinx:valueSource="user_prop"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_GPIO_WIDTH" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.GPIO_BOARD_INTERFACE" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.USE_BOARD_FLOW" xilinx:valueSource="user"/>
       </xilinx:configElementInfos>

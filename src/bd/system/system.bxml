@@ -2,9 +2,9 @@
 <Root MajorVersion="0" MinorVersion="33">
   <CompositeFile CompositeFileTopName="system" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1507913801"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1507913801"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1507913801"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1517177004"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1517177004"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1517177004"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip/system_PWM_RGB_0/system_PWM_RGB_0.xci" Type="IP">
         <Instance HierarchyPath="pwm_rgb"/>
@@ -230,6 +230,14 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
+      <File Name="ip/system_util_ds_buf_0_0/system_util_ds_buf_0_0.xci" Type="IP">
+        <Instance HierarchyPath="util_ds_buf_fclk1"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
       <File Name="ip/system_xbar_1/system_xbar_1.xci" Type="IP">
         <Instance HierarchyPath="ps7_0_axi_periph_GP0/xbar"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
@@ -240,20 +248,6 @@
       </File>
       <File Name="ip/system_xbar_0/system_xbar_0.xci" Type="IP">
         <Instance HierarchyPath="axi_mem_intercon_HP0/xbar"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="hdl/system.vhd" Type="VHDL">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip/system_util_ds_buf_0_0/system_util_ds_buf_0_0.xci" Type="IP">
-        <Instance HierarchyPath="util_ds_buf_fclk1"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -298,6 +292,12 @@
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="hdl/system.vhd" Type="VHDL">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="system_ooc.xdc" Type="XDC">

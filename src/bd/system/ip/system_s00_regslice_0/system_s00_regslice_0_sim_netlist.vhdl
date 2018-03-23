@@ -1,14 +1,14 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.2.1 (lin64) Build 1957588 Wed Aug  9 16:32:10 MDT 2017
--- Date        : Wed Oct 11 10:34:52 2017
+-- Date        : Sun Jan 28 14:04:43 2018
 -- Host        : ubuntu running 64-bit unknown
--- Command     : write_vhdl -force -mode funcsim -rename_top system_s00_regslice_0 -prefix
---               system_s00_regslice_0_ system_s00_regslice_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim
+--               /home/digilent/work/git/Zybo-Z7-10-base-linux/src/bd/system/ip/system_s00_regslice_0/system_s00_regslice_0_sim_netlist.vhdl
 -- Design      : system_s00_regslice_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
--- Device      : xc7z020clg400-1
+-- Device      : xc7z010clg400-1
 -- --------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -2905,6 +2905,8 @@ entity system_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice is
   attribute G_AXI_WUSER_INDEX of system_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 73;
   attribute G_AXI_WUSER_WIDTH : integer;
   attribute G_AXI_WUSER_WIDTH of system_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 0;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is "axi_register_slice_v2_1_13_axi_register_slice";
 end system_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice;
 
 architecture STRUCTURE of system_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice is

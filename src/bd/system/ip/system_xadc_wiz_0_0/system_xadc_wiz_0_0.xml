@@ -1338,11 +1338,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Oct 11 11:12:10 UTC 2017</spirit:value>
+            <spirit:value>Sun Jan 28 22:03:22 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:fc824470</spirit:value>
+            <spirit:value>7:4922ba42</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1357,11 +1357,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Oct 11 11:12:10 UTC 2017</spirit:value>
+            <spirit:value>Sun Jan 28 22:03:22 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:fc824470</spirit:value>
+            <spirit:value>7:4922ba42</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1375,11 +1375,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Oct 11 11:12:10 UTC 2017</spirit:value>
+            <spirit:value>Sun Jan 28 22:03:22 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:19b2cbcf</spirit:value>
+            <spirit:value>7:bed1fc82</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1394,11 +1394,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Oct 11 11:12:10 UTC 2017</spirit:value>
+            <spirit:value>Sun Jan 28 22:03:22 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:19b2cbcf</spirit:value>
+            <spirit:value>7:bed1fc82</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1412,11 +1412,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Oct 11 11:13:38 UTC 2017</spirit:value>
+            <spirit:value>Sun Jan 28 22:06:03 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:fc824470</spirit:value>
+            <spirit:value>7:4922ba42</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -4830,10 +4830,12 @@
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.CHANNEL_ENABLE_VP_VN" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.CHANNEL_ENABLE_VREFN" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.CHANNEL_ENABLE_VREFP" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.ENABLE_RESET" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.ENABLE_VCCDDRO_ALARM" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.ENABLE_VCCPAUX_ALARM" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.ENABLE_VCCPINT_ALARM" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.EXTERNAL_MUX_CHANNEL" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.INTERFACE_SELECTION" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.OT_ALARM" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.SEQUENCER_MODE" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.SINGLE_CHANNEL_SELECTION" xilinx:valueSource="user"/>

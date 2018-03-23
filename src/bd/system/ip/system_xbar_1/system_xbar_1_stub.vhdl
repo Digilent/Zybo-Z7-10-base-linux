@@ -1,13 +1,13 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.2.1 (lin64) Build 1957588 Wed Aug  9 16:32:10 MDT 2017
--- Date        : Wed Oct 11 04:14:33 2017
+-- Date        : Sun Jan 28 14:05:18 2018
 -- Host        : ubuntu running 64-bit unknown
 -- Command     : write_vhdl -force -mode synth_stub
---               /home/digilent/work/git/Zybo-Z7-20-base-linux/src/bd/system/ip/system_xbar_1/system_xbar_1_stub.vhdl
+--               /home/digilent/work/git/Zybo-Z7-10-base-linux/src/bd/system/ip/system_xbar_1/system_xbar_1_stub.vhdl
 -- Design      : system_xbar_1
 -- Purpose     : Stub declaration of top-level module interface
--- Device      : xc7z020clg400-1
+-- Device      : xc7z010clg400-1
 -- --------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;

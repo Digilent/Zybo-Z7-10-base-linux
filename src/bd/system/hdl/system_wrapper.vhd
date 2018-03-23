@@ -1,7 +1,7 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.2.1 (lin64) Build 1957588 Wed Aug  9 16:32:10 MDT 2017
---Date        : Fri Oct 13 09:56:40 2017
+--Date        : Sun Jan 28 14:03:07 2018
 --Host        : ubuntu running 64-bit unknown
 --Command     : generate_target system_wrapper.bd
 --Design      : system_wrapper
@@ -69,7 +69,7 @@ entity system_wrapper is
     hdmi_out_ddc_scl_io : inout STD_LOGIC;
     hdmi_out_ddc_sda_io : inout STD_LOGIC;
     leds_4bits_tri_io : inout STD_LOGIC_VECTOR ( 3 downto 0 );
-    pwm_rgb : out STD_LOGIC_VECTOR ( 5 downto 0 );
+    pwm_rgb : out STD_LOGIC_VECTOR ( 2 downto 0 );
     sws_4bits_tri_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
     sys_clock : in STD_LOGIC
   );
@@ -143,7 +143,6 @@ architecture STRUCTURE of system_wrapper is
     leds_4bits_tri_o : out STD_LOGIC_VECTOR ( 3 downto 0 );
     leds_4bits_tri_t : out STD_LOGIC_VECTOR ( 3 downto 0 );
     sws_4bits_tri_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    pwm_rgb : out STD_LOGIC_VECTOR ( 5 downto 0 );
     ac_recdat : in STD_LOGIC_VECTOR ( 0 to 0 );
     hdmi_in_hpd : out STD_LOGIC_VECTOR ( 0 to 0 );
     ac_bclk : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -152,7 +151,8 @@ architecture STRUCTURE of system_wrapper is
     ac_pbdat : out STD_LOGIC_VECTOR ( 0 to 0 );
     ac_mclk : out STD_LOGIC;
     sys_clock : in STD_LOGIC;
-    ac_muten : out STD_LOGIC_VECTOR ( 0 to 0 )
+    ac_muten : out STD_LOGIC_VECTOR ( 0 to 0 );
+    pwm_rgb : out STD_LOGIC_VECTOR ( 2 downto 0 )
   );
   end component system;
   component IOBUF is
@@ -362,7 +362,7 @@ system_i: component system
       leds_4bits_tri_t(2) => leds_4bits_tri_t_2(2),
       leds_4bits_tri_t(1) => leds_4bits_tri_t_1(1),
       leds_4bits_tri_t(0) => leds_4bits_tri_t_0(0),
-      pwm_rgb(5 downto 0) => pwm_rgb(5 downto 0),
+      pwm_rgb(2 downto 0) => pwm_rgb(2 downto 0),
       sws_4bits_tri_i(3 downto 0) => sws_4bits_tri_i(3 downto 0),
       sys_clock => sys_clock
     );

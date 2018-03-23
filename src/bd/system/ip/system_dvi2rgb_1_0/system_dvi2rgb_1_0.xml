@@ -543,11 +543,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Oct 11 11:12:00 UTC 2017</spirit:value>
+            <spirit:value>Sun Jan 28 22:03:09 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:40182eff</spirit:value>
+            <spirit:value>7:ee1c8874</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -562,11 +562,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Oct 11 11:23:36 UTC 2017</spirit:value>
+            <spirit:value>Sun Jan 28 22:03:09 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:40182eff</spirit:value>
+            <spirit:value>7:ee1c8874</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -581,11 +581,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Oct 11 11:12:00 UTC 2017</spirit:value>
+            <spirit:value>Sun Jan 28 22:03:09 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:811e79e0</spirit:value>
+            <spirit:value>7:2291fdeb</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -600,11 +600,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Oct 11 11:23:36 UTC 2017</spirit:value>
+            <spirit:value>Sun Jan 28 22:03:09 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:811e79e0</spirit:value>
+            <spirit:value>7:2291fdeb</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -618,11 +618,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Oct 11 11:24:23 UTC 2017</spirit:value>
+            <spirit:value>Sun Jan 28 22:06:35 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:40182eff</spirit:value>
+            <spirit:value>7:ee1c8874</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
