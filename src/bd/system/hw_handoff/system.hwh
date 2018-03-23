@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Jan 28 14:03:23 2018" VIVADOVERSION="2017.2.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Mar 23 14:11:03 2018" VIVADOVERSION="2017.4">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo-z7-10:part0:1.0" DEVICE="7z010" NAME="system" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -4616,6 +4616,7 @@
         <PARAMETER NAME="C_ENABLE_DEBUG_INFO_15" VALUE="1"/>
         <PARAMETER NAME="C_INSTANCE" VALUE="axi_vdma"/>
         <PARAMETER NAME="C_SELECT_XPM" VALUE="0"/>
+        <PARAMETER NAME="C_ENABLE_VERT_FLIP" VALUE="0"/>
         <PARAMETER NAME="C_FAMILY" VALUE="zynq"/>
         <PARAMETER NAME="Component_Name" VALUE="system_axi_vdma_0_0"/>
         <PARAMETER NAME="c_m_axi_mm2s_data_width" VALUE="64"/>
@@ -4672,6 +4673,7 @@
         <PARAMETER NAME="c_mm2s_genlock_repeat_en" VALUE="0"/>
         <PARAMETER NAME="c_addr_width" VALUE="32"/>
         <PARAMETER NAME="c_single_interface" VALUE="0"/>
+        <PARAMETER NAME="c_enable_vert_flip" VALUE="0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
         <PARAMETER NAME="C_BASEADDR" VALUE="0x43000000"/>
         <PARAMETER NAME="C_HIGHADDR" VALUE="0x4300FFFF"/>
@@ -6585,6 +6587,7 @@
         <PARAMETER NAME="C_ENABLE_DEBUG_INFO_15" VALUE="1"/>
         <PARAMETER NAME="C_INSTANCE" VALUE="axi_vdma"/>
         <PARAMETER NAME="C_SELECT_XPM" VALUE="0"/>
+        <PARAMETER NAME="C_ENABLE_VERT_FLIP" VALUE="0"/>
         <PARAMETER NAME="C_FAMILY" VALUE="zynq"/>
         <PARAMETER NAME="Component_Name" VALUE="system_axi_vdma_1_0"/>
         <PARAMETER NAME="c_m_axi_mm2s_data_width" VALUE="64"/>
@@ -6641,6 +6644,7 @@
         <PARAMETER NAME="c_mm2s_genlock_repeat_en" VALUE="0"/>
         <PARAMETER NAME="c_addr_width" VALUE="32"/>
         <PARAMETER NAME="c_single_interface" VALUE="0"/>
+        <PARAMETER NAME="c_enable_vert_flip" VALUE="0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
         <PARAMETER NAME="C_BASEADDR" VALUE="0x43010000"/>
         <PARAMETER NAME="C_HIGHADDR" VALUE="0x4301FFFF"/>
@@ -7291,7 +7295,7 @@
     </MODULE>
     <MODULE FULLNAME="/clk_wiz_0" HWVERSION="5.4" INSTANCE="clk_wiz_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="clk_wiz" VLNV="xilinx.com:ip:clk_wiz:5.4">
       <DOCUMENTS>
-        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=clk_wiz;v=v5_3;d=pg065-clk-wiz.pdf"/>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=clk_wiz;v=v5_4;d=pg065-clk-wiz.pdf"/>
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="C_CLKOUT2_USED" VALUE="0"/>
@@ -7873,7 +7877,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE FULLNAME="/dvi2rgb_1" HWVERSION="1.8" INSTANCE="dvi2rgb_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="dvi2rgb" VLNV="digilentinc.com:ip:dvi2rgb:1.8">
+    <MODULE FULLNAME="/dvi2rgb_1" HWVERSION="1.9" INSTANCE="dvi2rgb_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="dvi2rgb" VLNV="digilentinc.com:ip:dvi2rgb:1.9">
       <DOCUMENTS>
         <DOCUMENT SOURCE="/home/digilent/work/git/Zybo-Z7-10-base-linux/repo/vivado-library/ip/dvi2rgb/docs/dvi2rgb.pdf"/>
       </DOCUMENTS>
@@ -7885,6 +7889,7 @@
         <PARAMETER NAME="kIDLY_TapWidth" VALUE="5"/>
         <PARAMETER NAME="kAddBUFG" VALUE="true"/>
         <PARAMETER NAME="kEdidFileName" VALUE="dgl_720p_cea.data"/>
+        <PARAMETER NAME="kDebug" VALUE="true"/>
         <PARAMETER NAME="Component_Name" VALUE="system_dvi2rgb_1_0"/>
         <PARAMETER NAME="kEnableSerialClkOutput" VALUE="false"/>
         <PARAMETER NAME="TMDS_BOARD_INTERFACE" VALUE="hdmi_in"/>
@@ -8076,6 +8081,7 @@
         <PARAMETER NAME="C_USE_M_AXI_GP0" VALUE="1"/>
         <PARAMETER NAME="C_USE_M_AXI_GP1" VALUE="0"/>
         <PARAMETER NAME="C_USE_S_AXI_GP0" VALUE="0"/>
+        <PARAMETER NAME="C_USE_S_AXI_GP1" VALUE="0"/>
         <PARAMETER NAME="C_USE_S_AXI_HP0" VALUE="1"/>
         <PARAMETER NAME="C_USE_S_AXI_HP1" VALUE="0"/>
         <PARAMETER NAME="C_USE_S_AXI_HP2" VALUE="0"/>
@@ -8545,6 +8551,9 @@
         <PARAMETER NAME="PCW_QSPI_GRP_SINGLE_SS_IO" VALUE="MIO 1 .. 6"/>
         <PARAMETER NAME="PCW_QSPI_GRP_SS1_ENABLE" VALUE="0"/>
         <PARAMETER NAME="PCW_QSPI_GRP_SS1_IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PCW_SINGLE_QSPI_DATA_MODE" VALUE="x4"/>
+        <PARAMETER NAME="PCW_DUAL_STACK_QSPI_DATA_MODE" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PCW_DUAL_PARALLEL_QSPI_DATA_MODE" VALUE="&lt;Select>"/>
         <PARAMETER NAME="PCW_QSPI_GRP_IO1_ENABLE" VALUE="0"/>
         <PARAMETER NAME="PCW_QSPI_GRP_IO1_IO" VALUE="&lt;Select>"/>
         <PARAMETER NAME="PCW_QSPI_GRP_FBCLK_ENABLE" VALUE="1"/>
@@ -8913,7 +8922,7 @@
         <PARAMETER NAME="preset" VALUE="None"/>
         <PARAMETER NAME="PCW_UIPARAM_GENERATE_SUMMARY" VALUE="NA"/>
         <PARAMETER NAME="PCW_MIO_TREE_PERIPHERALS" VALUE="GPIO#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#GPIO#Quad SPI Flash#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#SD 0#SD 0#SD 0#SD 0#SD 0#SD 0#USB Reset#SD 0#UART 1#UART 1#GPIO#GPIO#Enet 0#Enet 0"/>
-        <PARAMETER NAME="PCW_MIO_TREE_SIGNALS" VALUE="gpio[0]#qspi0_ss_b#qspi0_io[0]#qspi0_io[1]#qspi0_io[2]#qspi0_io[3]#qspi0_sclk#gpio[7]#qspi_fbclk#gpio[9]#gpio[10]#gpio[11]#gpio[12]#gpio[13]#gpio[14]#gpio[15]#tx_clk#txd[0]#txd[1]#txd[2]#txd[3]#tx_ctl#rx_clk#rxd[0]#rxd[1]#rxd[2]#rxd[3]#rx_ctl#data[4]#dir#stp#nxt#data[0]#data[1]#data[2]#data[3]#clk#data[5]#data[6]#data[7]#clk#cmd#data[0]#data[1]#data[2]#data[3]#reset#cd#tx#rx#gpio[50]#gpio[51]#mdc#mdio"/>
+        <PARAMETER NAME="PCW_MIO_TREE_SIGNALS" VALUE="gpio[0]#qspi0_ss_b#qspi0_io[0]#qspi0_io[1]#qspi0_io[2]#qspi0_io[3]/HOLD_B#qspi0_sclk#gpio[7]#qspi_fbclk#gpio[9]#gpio[10]#gpio[11]#gpio[12]#gpio[13]#gpio[14]#gpio[15]#tx_clk#txd[0]#txd[1]#txd[2]#txd[3]#tx_ctl#rx_clk#rxd[0]#rxd[1]#rxd[2]#rxd[3]#rx_ctl#data[4]#dir#stp#nxt#data[0]#data[1]#data[2]#data[3]#clk#data[5]#data[6]#data[7]#clk#cmd#data[0]#data[1]#data[2]#data[3]#reset#cd#tx#rx#gpio[50]#gpio[51]#mdc#mdio"/>
         <PARAMETER NAME="PCW_PS7_SI_REV" VALUE="PRODUCTION"/>
         <PARAMETER NAME="PCW_FPGA_FCLK0_ENABLE" VALUE="1"/>
         <PARAMETER NAME="PCW_FPGA_FCLK1_ENABLE" VALUE="1"/>
@@ -9473,13 +9482,13 @@
             <CONNECTION INSTANCE="pwm_rgb" PORT="pwm_axi_aclk"/>
             <CONNECTION INSTANCE="axi_dynclk_0" PORT="REF_CLK_I"/>
             <CONNECTION INSTANCE="axi_dynclk_0" PORT="s00_axi_aclk"/>
+            <CONNECTION INSTANCE="axi_i2s_adi_0" PORT="DMA_REQ_TX_ACLK"/>
+            <CONNECTION INSTANCE="axi_i2s_adi_0" PORT="DMA_REQ_RX_ACLK"/>
+            <CONNECTION INSTANCE="axi_i2s_adi_0" PORT="S_AXI_ACLK"/>
             <CONNECTION INSTANCE="axi_gpio_eth" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="axi_gpio_led" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="axi_gpio_sw_btn" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="axi_gpio_video" PORT="s_axi_aclk"/>
-            <CONNECTION INSTANCE="axi_i2s_adi_0" PORT="DMA_REQ_TX_ACLK"/>
-            <CONNECTION INSTANCE="axi_i2s_adi_0" PORT="DMA_REQ_RX_ACLK"/>
-            <CONNECTION INSTANCE="axi_i2s_adi_0" PORT="S_AXI_ACLK"/>
             <CONNECTION INSTANCE="axi_vdma_0" PORT="s_axi_lite_aclk"/>
             <CONNECTION INSTANCE="axi_vdma_1" PORT="s_axi_lite_aclk"/>
             <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_ACLK"/>
@@ -12168,19 +12177,19 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="pwm_rgb" PORT="pwm_axi_aresetn"/>
             <CONNECTION INSTANCE="axi_dynclk_0" PORT="s00_axi_aresetn"/>
+            <CONNECTION INSTANCE="axi_i2s_adi_0" PORT="DMA_REQ_TX_RSTN"/>
+            <CONNECTION INSTANCE="axi_i2s_adi_0" PORT="DMA_REQ_RX_RSTN"/>
+            <CONNECTION INSTANCE="axi_i2s_adi_0" PORT="S_AXI_ARESETN"/>
             <CONNECTION INSTANCE="axi_gpio_eth" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="axi_gpio_led" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="axi_gpio_sw_btn" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="axi_gpio_video" PORT="s_axi_aresetn"/>
-            <CONNECTION INSTANCE="axi_i2s_adi_0" PORT="DMA_REQ_TX_RSTN"/>
-            <CONNECTION INSTANCE="axi_i2s_adi_0" PORT="DMA_REQ_RX_RSTN"/>
-            <CONNECTION INSTANCE="axi_i2s_adi_0" PORT="S_AXI_ARESETN"/>
             <CONNECTION INSTANCE="axi_vdma_0" PORT="axi_resetn"/>
             <CONNECTION INSTANCE="axi_vdma_1" PORT="axi_resetn"/>
-            <CONNECTION INSTANCE="dvi2rgb_1" PORT="aRst_n"/>
             <CONNECTION INSTANCE="v_tc_in" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="v_tc_out" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="xadc_wiz_0" PORT="s_axi_aresetn"/>
+            <CONNECTION INSTANCE="dvi2rgb_1" PORT="aRst_n"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph_GP0" PORT="S00_ARESETN"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph_GP0" PORT="M00_ARESETN"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph_GP0" PORT="M01_ARESETN"/>
@@ -12243,8 +12252,8 @@
         <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" RIGHT="0" SIGIS="rst" SIGNAME="rst_ps7_0_133M_peripheral_aresetn">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_mem_intercon_HP0" PORT="S00_ARESETN"/>
-            <CONNECTION INSTANCE="axi_mem_intercon_HP0" PORT="M00_ARESETN"/>
             <CONNECTION INSTANCE="axi_mem_intercon_HP0" PORT="S01_ARESETN"/>
+            <CONNECTION INSTANCE="axi_mem_intercon_HP0" PORT="M00_ARESETN"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -12280,8 +12289,8 @@
             <CONNECTION INSTANCE="v_vid_in_axi4s_0" PORT="aclk"/>
             <CONNECTION INSTANCE="axi_mem_intercon_HP0" PORT="ACLK"/>
             <CONNECTION INSTANCE="axi_mem_intercon_HP0" PORT="S00_ACLK"/>
-            <CONNECTION INSTANCE="axi_mem_intercon_HP0" PORT="M00_ACLK"/>
             <CONNECTION INSTANCE="axi_mem_intercon_HP0" PORT="S01_ACLK"/>
+            <CONNECTION INSTANCE="axi_mem_intercon_HP0" PORT="M00_ACLK"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

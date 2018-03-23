@@ -1,8 +1,8 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2017.2.1 (lin64) Build 1957588 Wed Aug  9 16:32:10 MDT 2017
-// Date        : Sun Jan 28 14:04:43 2018
-// Host        : ubuntu running 64-bit unknown
+// Tool Version: Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
+// Date        : Fri Mar 23 14:35:53 2018
+// Host        : ubuntu running 64-bit Ubuntu 16.04.3 LTS
 // Command     : write_verilog -force -mode synth_stub
 //               /home/digilent/work/git/Zybo-Z7-10-base-linux/src/bd/system/ip/system_s00_regslice_0/system_s00_regslice_0_stub.v
 // Design      : system_s00_regslice_0
@@ -13,7 +13,7 @@
 // This empty module with port declaration file causes synthesis tools to infer a black box for IP.
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
-(* X_CORE_INFO = "axi_register_slice_v2_1_13_axi_register_slice,Vivado 2017.2.1" *)
+(* X_CORE_INFO = "axi_register_slice_v2_1_15_axi_register_slice,Vivado 2017.4" *)
 module system_s00_regslice_0(aclk, aresetn, s_axi_araddr, s_axi_arlen, 
   s_axi_arsize, s_axi_arburst, s_axi_arlock, s_axi_arcache, s_axi_arprot, s_axi_arregion, 
   s_axi_arqos, s_axi_arvalid, s_axi_arready, s_axi_rdata, s_axi_rresp, s_axi_rlast, 

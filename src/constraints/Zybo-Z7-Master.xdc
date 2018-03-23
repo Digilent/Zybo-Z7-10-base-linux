@@ -206,4 +206,4 @@ set_property BITSTREAM.GENERAL.COMPRESS TRUE [current_design]
 set_false_path -from [get_clocks clk_out1_system_clk_wiz_0_0] -to [get_clocks clk_fpga_0]
 set_false_path -from [get_clocks clk_fpga_0] -to [get_clocks clk_out1_system_clk_wiz_0_0]
 
-create_clock -add -name hdmi_in_clk -period 8.4 -waveform {0 4.2} [get_ports { hdmi_in_clk_p }];
+create_clock -period 8.4 [get_ports { hdmi_in_clk_p }];
