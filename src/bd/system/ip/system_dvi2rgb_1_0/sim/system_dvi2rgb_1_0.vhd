@@ -153,7 +153,7 @@ BEGIN
       kIDLY_TapWidth => 5,
       kAddBUFG => true,
       kEdidFileName => "dgl_720p_cea.data",
-      kDebug => true
+      kDebug => false
     )
     PORT MAP (
       TMDS_Clk_p => TMDS_Clk_p,

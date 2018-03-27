@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="33">
   <CompositeFile CompositeFileTopName="system" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1521839464"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1521839464"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1521839464"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1521839464"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1522184859"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1522184859"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1522184859"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1522184859"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip/system_PWM_RGB_0/system_PWM_RGB_0.xci" Type="IP">
         <Instance HierarchyPath="pwm_rgb"/>
@@ -255,6 +255,16 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
+      <File Name="synth/system.vhd" Type="VHDL">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+      </File>
+      <File Name="sim/system.vhd" Type="VHDL">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
       <File Name="ip/system_auto_pc_1/system_auto_pc_1.xci" Type="IP">
         <Instance HierarchyPath="ps7_0_axi_periph_GP0/s00_couplers/auto_pc"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
@@ -293,16 +303,6 @@
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="synth/system.vhd" Type="VHDL">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-      </File>
-      <File Name="sim/system.vhd" Type="VHDL">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="system_ooc.xdc" Type="XDC">

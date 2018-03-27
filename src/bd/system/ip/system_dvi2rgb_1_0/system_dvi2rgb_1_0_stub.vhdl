@@ -1,7 +1,7 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
--- Date        : Fri Mar 23 14:34:47 2018
+-- Date        : Tue Mar 27 14:08:55 2018
 -- Host        : ubuntu running 64-bit Ubuntu 16.04.3 LTS
 -- Command     : write_vhdl -force -mode synth_stub
 --               /home/digilent/work/git/Zybo-Z7-10-base-linux/src/bd/system/ip/system_dvi2rgb_1_0/system_dvi2rgb_1_0_stub.vhdl

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Mar 23 14:11:03 2018" VIVADOVERSION="2017.4">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Mar 27 14:07:39 2018" VIVADOVERSION="2017.4">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo-z7-10:part0:1.0" DEVICE="7z010" NAME="system" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -7889,7 +7889,7 @@
         <PARAMETER NAME="kIDLY_TapWidth" VALUE="5"/>
         <PARAMETER NAME="kAddBUFG" VALUE="true"/>
         <PARAMETER NAME="kEdidFileName" VALUE="dgl_720p_cea.data"/>
-        <PARAMETER NAME="kDebug" VALUE="true"/>
+        <PARAMETER NAME="kDebug" VALUE="false"/>
         <PARAMETER NAME="Component_Name" VALUE="system_dvi2rgb_1_0"/>
         <PARAMETER NAME="kEnableSerialClkOutput" VALUE="false"/>
         <PARAMETER NAME="TMDS_BOARD_INTERFACE" VALUE="hdmi_in"/>

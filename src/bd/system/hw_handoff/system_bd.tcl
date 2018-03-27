@@ -373,6 +373,7 @@ proc create_root_design { parentCell } {
    CONFIG.TMDS_BOARD_INTERFACE {hdmi_in} \
    CONFIG.kAddBUFG {true} \
    CONFIG.kClkRange {2} \
+   CONFIG.kDebug {false} \
    CONFIG.kEdidFileName {dgl_720p_cea.data} \
    CONFIG.kRstActiveHigh {false} \
  ] $dvi2rgb_1
